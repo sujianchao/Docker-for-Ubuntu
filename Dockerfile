@@ -17,8 +17,8 @@ RUN apt-get install -q -y openssh-server && \
 RUN echo "root:sujianchao" | chpasswd
  
 # 下面这两句比较特殊，否则创建出来的容器sshd不能登录
-RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
-RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+#RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
+#RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 
 # 启动sshd服务并且暴露相关端口
 RUN mkdir /var/run/sshd
