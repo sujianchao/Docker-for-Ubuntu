@@ -7,7 +7,7 @@ MAINTAINER SuJianchao <sujianchao@gmail.com>
 
 #更新
 RUN apt-get -qq update && \
-	apt-get upgrade -y\
+	apt-get upgrade -y
 #安装openssh-server和sudo软件包，并且将sshd的UsePAM参数设置成no
 RUN apt-get install -q -y openssh-server && \
     apt-get clean && \
